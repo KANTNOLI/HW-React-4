@@ -4,6 +4,10 @@ import { NewsIntf } from "../../Interfaces.interface";
 import style from "./News.module.css";
 
 function News() {
+  const [newNews, setNewNews] = useState<NewsIntf>({
+    content: "",
+    date: new Date(),
+  });
   const [NewsList, setNewsList] = useState<NewsIntf[]>([
     {
       content: "CONTENT 1 CONTENT 1  CONTENT 1 CONTENT 1 CONTENT 1 ",
@@ -14,8 +18,20 @@ function News() {
   return (
     <section className={style.body}>
       <div className={style.panel}>
-        <input type="text" placeholder="Write news" />
-        <button>Add news</button>
+        <input
+          type="text"
+          placeholder="Write news"
+          value={newNews.content}
+          onChange={(e) =>
+            setNewNews({
+              content: e.target.value,
+              date: new Date(),
+            })
+          }
+        />
+        <button onClick={() => setNewsList([...NewsList, newNews])}>
+          Add news
+        </button>
       </div>
 
       {NewsList.map((news, id) => (
