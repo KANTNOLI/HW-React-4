@@ -4,3 +4,8 @@ export interface StdIntf {
   money: number;
   mail: string;
 }
+
+export interface NewsIntf {
+  content: string;
+  date: Date;
+}
