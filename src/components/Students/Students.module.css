@@ -1,5 +1,16 @@
 .body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: start;
   padding: 20px;
   width: calc(100% - 40px);
   height: calc(90vh - 41px);
+}
+
+.cart {
+  margin: 5px;
+  width: 200px;
+  height: 100px;
+  background-color: rgb(78, 78, 78);
 }

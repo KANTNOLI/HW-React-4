@@ -4,8 +4,11 @@
   padding: 0;
 
   color: white;
-  background-color: rgb(26, 26, 26);
 }
 input {
   color: black;
+}
+
+body {
+  background-color: rgb(26, 26, 26);
 }
